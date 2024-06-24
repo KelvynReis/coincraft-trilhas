@@ -1,5 +1,4 @@
 import { Container } from "@/components/Container";
-import logoCoinCraft from "../../public/assets/logos/logo-coicraft.png";
 
 export function Form() {
   return (
@@ -17,7 +16,7 @@ export function Form() {
         </div>
 
         <div className="registration__form flex-1 flex flex-col items-center justify-center gap-5 p-2 rounded-2xl">
-          <img src={logoCoinCraft} alt="Imagem Coin Craft" className="mt-2" />
+          <img src={'./assets/logos/logo-coicraft.png'} alt="Imagem Coin Craft" className="mt-2" />
 
           <form className="w-full  flex flex-col px-4 gap-3">
             <input
