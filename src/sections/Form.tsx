@@ -5,10 +5,10 @@ export function Form() {
     <section className="w-full bg-secondary">
       <Container className="w-full  flex items-center justify-center gap-24 px-36 py-11 lg:flex-row">
         <div className="information__texts flex-1 flex flex-col gap-10">
-          <h2 className="font-semibold text-[3.4rem] text-[#d9d9d9] -tracking-[2%]">
+          <h2 className="font-semibold text-center text-3xl lg:text-[3.4rem] text-[#d9d9d9] -tracking-[2%]">
             Junte-se a nós e <span className="text-[#55d98d]">transforme a sua vida financeira</span>
           </h2>
-          <p className="text-3xl text-[#d9d9d9] leading-7">
+          <p className="text-xl text-center lg:text-3xl lg:text-start text-[#d9d9d9] leading-7">
             Cadastre-se gratuitamente e junte-se a nossa comunidade de jogadores
             que já estão transformando suas vidas financeiras. Não perca mais
             tempo e comece sua jornada!
@@ -16,7 +16,11 @@ export function Form() {
         </div>
 
         <div className="registration__form flex-1 flex flex-col items-center justify-center gap-5 p-2 rounded-2xl">
-          <img src={'./assets/logos/logo-coicraft.png'} alt="Imagem Coin Craft" className="mt-2" />
+          <img
+            src={'./assets/logos/logo-coicraft.png'}
+            alt="Imagem Coin Craft"
+            className="mt-2 w-[150px] h-9 lg:w-60 lg:h-14 "
+          />
 
           <form className="w-full  flex flex-col px-4 gap-3">
             <input

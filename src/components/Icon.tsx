@@ -1,5 +1,3 @@
-'use client'
-
 import { IconBaseProps, IconType } from 'react-icons'
 import * as IconCi from 'react-icons/ci'
 import * as IconFa from 'react-icons/fa'
