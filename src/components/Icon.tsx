@@ -10,6 +10,7 @@ import * as IconMd from 'react-icons/md'
 import * as IconPi from 'react-icons/pi'
 import * as IconRi from "react-icons/ri";
 import * as IconTfi from 'react-icons/tfi'
+import * as IconLu from "react-icons/lu";
 
 type IconGroup =
   | 'Fa'
@@ -23,6 +24,7 @@ type IconGroup =
   | 'Go'
   | 'Io'
   | 'Ri'
+  | 'Lu'
 
 type IconNameFa = keyof typeof IconFa
 type IconNameMd = keyof typeof IconMd
@@ -35,6 +37,8 @@ type IconNameTfi = keyof typeof IconTfi
 type IconNameGo = keyof typeof IconGo
 type IconNameIo5 = keyof typeof IconIo5
 type IconNameRi = keyof typeof IconRi
+type IconNameLu = keyof typeof IconLu;
+
 
 export type IconProps = IconBaseProps & {
   name:
@@ -49,6 +53,7 @@ export type IconProps = IconBaseProps & {
   | IconNameGo
   | IconNameIo5
   | IconNameRi
+  | IconNameLu
 }
 
 export function Icon({ name, ...rest }: IconProps) {
@@ -66,6 +71,7 @@ export function Icon({ name, ...rest }: IconProps) {
     Go: IconGo[name as IconNameGo],
     Io: IconIo5[name as IconNameIo5],
     Ri: IconRi[name as IconNameRi],
+    Lu: IconLu[name as IconNameLu],
   }
 
   const IconElement = Icon[iconGroup]

@@ -68,7 +68,7 @@
         --border: 217.2 32.6% 17.5%;
         --input: 217.2 32.6% 17.5%;
         --ring: 212.7 26.8% 83.9%;
-        --btn-primary: hsla(140, 46%, 40%, 1) hsla(140, 47%, 51%, 1) hsla(140, 53%, 53%, 1);
+        --btn-primary: 140 46% 40%;
         --btn-secondary: 210 29% 24% 1;
     }
 }
@@ -93,7 +93,31 @@
     }
 
     .nav-link-active {
-        @apply !text-primary after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-[80%] after:-translate-x-1/2 after:rounded-md after:bg-primary transition-all;
+        @apply !text-[#58F49A] after:absolute after:bottom-0 after:left-1/2 after:h-1 after:w-[80%] after:-translate-x-1/2 after:rounded-md after:bg-[#58F49A] transition-all;
+    }
+
+    .center {
+        @apply flex justify-center items-center;
+    }
+
+    .center-1 {
+        @apply center gap-1;
+    }
+
+    .center-2 {
+        @apply center gap-2;
+    }
+
+    .center-col {
+        @apply flex flex-col justify-center items-center;
+    }
+
+    .center-col-1 {
+        @apply center-col gap-1;
+    }
+
+    .center-col-2 {
+        @apply center-col gap-2;
     }
 
 }

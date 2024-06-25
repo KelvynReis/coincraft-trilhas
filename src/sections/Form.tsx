@@ -5,8 +5,8 @@ export function Form() {
     <section className="w-full bg-secondary">
       <Container className="w-full  flex items-center justify-center gap-24 px-36 py-11 lg:flex-row">
         <div className="information__texts flex-1 flex flex-col gap-10">
-          <h2 className="font-semibold text-center text-3xl lg:text-[3.4rem] text-[#d9d9d9] -tracking-[2%]">
-            Junte-se a nós e <span className="text-[#55d98d]">transforme a sua vida financeira</span>
+          <h2 className="max-w-[596px] font-semibold text-center lg:text-start text-3xl lg:text-[3.4rem] text-[#d9d9d9] leading-tight">
+            Junte-se a nós e <span className="text-[#55d98d]">transforme a sua <br /> vida financeira</span>
           </h2>
           <p className="text-xl text-center lg:text-3xl lg:text-start text-[#d9d9d9] leading-7">
             Cadastre-se gratuitamente e junte-se a nossa comunidade de jogadores

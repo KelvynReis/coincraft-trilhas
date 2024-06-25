@@ -63,6 +63,7 @@ const config = {
       },
       fontFamily: {
         sans: ["Lato", "sans-serif"],
+        league: ["League Spartan", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -88,7 +89,7 @@ const config = {
           width: "100%",
           margin: "0 auto",
           display: "flex",
-          "max-width": "1200px",
+          "max-width": "1280px",
           "flex-direction": "column",
           padding: "1.25rem 1.25rem 5rem 1.25rem ",
           "@media (min-width: 1024px)": {

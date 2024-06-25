@@ -7,7 +7,7 @@ export function Home() {
         <section className="relative h-screen max-h-[800px] w-full   bg-cover bg-center bg-no-repeat">
             <div className="primary-gradient absolute flex h-full w-full items-center justify-start">
                 <Header />
-                <Container className="flex gap-6 !pt-[152px] md:flex-row md:justify-between lg:gap-28">
+                <Container className="flex gap-6 lg:pt-0 md:flex-row md:justify-between lg:gap-28 lg:pb-0">
                     <div className="flex w-full !max-w-[543px] flex-col justify-center gap-10 items-center lg:items-start">
                         <h1 className="text-4xl font-semibold text-white md:text-[60px] md:font-bold md:leading-[71px]">
                             <img
@@ -31,13 +31,13 @@ export function Home() {
                         </div>
                     </div>
 
-                    <div className="">
+                    <div className="-mb-[152px] lg:-mb-[242px]">
                         <img
                             src="/assets/hero.png"
                             alt="Hero Image"
                             width={633}
                             height={647}
-                            className="w-[400px] h-[400px] object-contain lg:w-[633px] lg:h-[647px]  "
+                            className="w-[400px] h-[400px] object-contain lg:w-[633px] lg:h-[647px]"
                         />
                     </div>
                 </Container>
