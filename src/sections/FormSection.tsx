@@ -2,6 +2,7 @@ import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/form";
 import { Input } from "@/components/Input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/select";
 
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useState } from "react";
@@ -12,8 +13,8 @@ import { z } from "zod"
 const FormSchema = z.object({
   username: z.string().min(1, 'Nome Obrigatório'),
   email: z.string().email('E-mail inválido'),
-  password: z.string().min(6, 'Senha deve ter no mínimo 6 caracteres'),
-  passwordConfirmed: z.string().min(6, 'Senha deve ter no mínimo 6 caracteres'),
+  password: z.string().min(8, 'Senha deve ter no mínimo 6 caracteres'),
+  passwordConfirmed: z.string().min(8, 'Senha deve ter no mínimo 6 caracteres'),
   cidade: z.string().min(1, 'Cidade Obrigatória'),
   estado: z.string().min(1, 'Estado Obrigatório'),
   dataNascimento: z.string().min(1, 'Data de Nascimento Obrigatória'),
@@ -42,6 +43,11 @@ export function FormSection() {
   })
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+    const newData = {
+      ...data,
+      dataNascimento: data.dataNascimento.split('/').reverse().join('-')
+    }
+
     try {
       setIsLoading(true)
       const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/register`, {
@@ -49,7 +55,7 @@ export function FormSection() {
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(newData)
       })
 
       const result = await response.json()
@@ -62,11 +68,14 @@ export function FormSection() {
       }
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
-      toast.error(error)
+      toast.error(error.message)
     } finally {
       setIsLoading(false)
     }
   }
+
+  console.log(form.formState.errors);
+
 
 
   return (
@@ -194,14 +203,21 @@ export function FormSection() {
                 name="genero"
                 render={({ field }) => (
                   <FormItem>
-                    <FormControl>
-                      <Input
-                        type="text"
-                        placeholder="GÊNERO"
-                        className="p-1 text-center rounded-xl  outline-none"
-                        {...field}
-                      />
-                    </FormControl>
+                    <Select onValueChange={field.onChange} defaultValue={field.value}>
+                      <FormControl>
+                        <SelectTrigger >
+                          <SelectValue placeholder="GÊNERO" />
+                        </SelectTrigger>
+                      </FormControl>
+                      <SelectContent >
+                        <SelectItem value="HOMEM_CIS">HOMEM CIS</SelectItem>
+                        <SelectItem value="MULHER_CIS">MULHER CIS</SelectItem>
+                        <SelectItem value="HOMEM_TRANS">HOMEM TRANS</SelectItem>
+                        <SelectItem value="MULHER_TRANS">MULHER TRANS</SelectItem>
+                        <SelectItem value="NAO_BINARIO">NAO BINÁRIO</SelectItem>
+                        <SelectItem value="NAO_IDENTIFICADO">NAO IDENTIFICADO</SelectItem>
+                      </SelectContent>
+                    </Select>
                     <FormMessage />
                   </FormItem>
                 )}
