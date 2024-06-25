@@ -13,7 +13,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+          "border-2 border-green-500 text-white text-lg font-normal rounded-2xl cursor-pointer bg-transparent  hover:bg-green-500 hover:text-white transform hover:scale-110 transition-all duration-300 ease-in-out md:text-xl  lg:text-lg  sm:text-sm px-6",
         secondary:
           "bg-[#2C3E50] text-secondary-foreground hover:bg-[#2C3E50]/90 rounded-[40px] font-bold uppercase text-2xl text-white ",
         ghost: "hover:bg-accent hover:text-accent-foreground",

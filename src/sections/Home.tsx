@@ -1,13 +1,14 @@
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
 import { Header } from "@/components/Header";
+import { RoutePaths } from "@/utils/ui/Route";
 
 export function Home() {
     return (
-        <section className="relative h-screen max-h-[800px] w-full   bg-cover bg-center bg-no-repeat">
+        <section className="relative h-screen max-h-[800px] w-full   bg-cover bg-center bg-no-repeat" id={'home'}>
             <div className="primary-gradient absolute flex h-full w-full items-center justify-start">
                 <Header />
-                <Container className="flex gap-6 lg:pt-0 md:flex-row md:justify-between lg:gap-28 lg:pb-0">
+                <Container className="flex gap-6 lg:pt-0 md:flex-row md:justify-between lg:gap-28 lg:pb-0" >
                     <div className="flex w-full !max-w-[543px] flex-col justify-center gap-10 items-center lg:items-start">
                         <h1 className="text-4xl font-semibold text-white md:text-[60px] md:font-bold md:leading-[71px]">
                             <img
@@ -20,14 +21,14 @@ export function Home() {
                             Descubra como poupar e tomar decisões financeiras inteligentes enquanto se diverte com desafios supreendentes.
                         </p>
                         <div className="flex w-full justify-center gap-2 lg:justify-start lg:gap-6">
-                            <Button
-                                variant="default"
-                                className="w-full max-w-[280px] lg:w-[284px]"
-                            >
-                                <a href="#saiba-mais" className="uppercase">
+                            <a href={RoutePaths.play} target="_blank" >
+                                <Button
+                                    variant="default"
+                                    className="w-full max-w-[280px] lg:w-[284px] uppercase"
+                                >
                                     comece agora
-                                </a>
-                            </Button>
+                                </Button>
+                            </a>
                         </div>
                     </div>
 

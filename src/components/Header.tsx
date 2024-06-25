@@ -50,7 +50,7 @@ export function Header() {
                     </div>
 
                     <Button variant="secondary" className=' px-6 py-2'>
-                        <a href={RoutePaths.play} className="font-bold uppercase text-2xl text-white">
+                        <a href={RoutePaths.play} target='_blank' className="font-bold uppercase text-2xl text-white">
                             Jogar
                         </a>
                     </Button>

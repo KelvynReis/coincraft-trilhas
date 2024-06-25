@@ -18,7 +18,7 @@ export default function CardItem({ title, description, className, ...rest }: Car
                     <p className='text-center text-white font-sans'>{description}</p>
                 </div>
             </div>
-            <div className="w-[380px] h-64  rounded-3xl border border-green-400" />
+            <div className="w-full max-w-[380px] h-64  rounded-3xl border border-green-400" />
         </div>
     )
 }

@@ -5,7 +5,7 @@ import { RoutePaths } from "@/utils/ui/Route";
 export function Footer() {
     return (
         <section className="w-full primary-gradient">
-            <Container className="items-start gap-[25px] !pb-2">
+            <Container className="items-center lg:items-start gap-3 lg:gap-[25px] lg:!pb-2">
                 <picture className=" items-center justify-center gap-4 md:flex">
                     <a
                         href={RoutePaths.home}
@@ -16,18 +16,18 @@ export function Footer() {
                             alt="Logo Inova maranhao"
                             width={143}
                             height={48}
-                            className='object-contain w-[143px] h-[48px]'
+                            className='object-contain w-[100px] h-[20px]  lg:w-[143px] lg:h-[48px]'
                         />
                     </a>
                 </picture>
 
 
-                <div className="w-full flex justify-between items-center border-t-2 py-4">
+                <div className="w-full flex flex-col justify-between items-center border-t-2 py-4 lg:flex-row">
                     <span className="text-white">
                         Termos e condições
                     </span>
 
-                    <div className="flex items-center gap-12">
+                    <div className="flex flex-col items-center gap-2 lg:gap-12 lg:flex-row">
                         {navLinks.map((link, i) => (
                             <a
                                 key={i}

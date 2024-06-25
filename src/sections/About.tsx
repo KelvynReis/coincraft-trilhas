@@ -3,7 +3,7 @@ import { Container } from '@/components/Container'
 
 export function About() {
     return (
-        <section className='w-full bg-secondary'>
+        <section className='w-full bg-secondary' id='about'>
             <Container className='gap-6 lg:px-0 lg:gap-20'>
                 <div className='center-col gap-3 lg:gap-7'>
                     <h2 className='text-3xl lg:text-[60px] font-bold text-center text-white'>Domine a gestão financeira com  <span className='text-[#58F49A]'>CoinCraft</span> </h2>
