@@ -13,8 +13,8 @@ import { z } from "zod"
 const FormSchema = z.object({
   username: z.string().min(1, 'Nome Obrigatório'),
   email: z.string().email('E-mail inválido'),
-  password: z.string().min(8, 'Senha deve ter no mínimo 6 caracteres'),
-  passwordConfirmed: z.string().min(8, 'Senha deve ter no mínimo 6 caracteres'),
+  password: z.string().min(8, 'Senha deve ter no mínimo 8 caracteres'),
+  passwordConfirmed: z.string().min(8, 'Senha deve ter no mínimo 8 caracteres'),
   cidade: z.string().min(1, 'Cidade Obrigatória'),
   estado: z.string().min(1, 'Estado Obrigatório'),
   dataNascimento: z.string().min(1, 'Data de Nascimento Obrigatória'),
