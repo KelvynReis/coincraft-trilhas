@@ -14,7 +14,7 @@ export const navLinks = [
     path: RoutePaths.content,
   },
   {
-    label: "DÚVIDAS FREQUENTES",
-    path: RoutePaths.doubts,
+    label: "cadastro",
+    path: RoutePaths.register,
   },
 ];
