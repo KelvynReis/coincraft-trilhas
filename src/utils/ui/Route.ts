@@ -3,5 +3,5 @@ export const RoutePaths = {
   about: "#about",
   content: "#content",
   doubts: "#doubts",
-  play: "https://lucyeneinova.itch.io/coincraft",
+  play: "https://lucyeneinova.itch.io/coincraftvalley",
 } as const;
