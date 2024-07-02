@@ -74,7 +74,7 @@ export function FormSection() {
     return (
         <section className="w-full bg-secondary" id="register">
             <Container className="w-full  flex items-center justify-center gap-24 px-36 py-11 lg:flex-row" >
-                <div className="information__texts flex-1 flex flex-col gap-10">
+                <div className="flex-1 flex flex-col gap-10">
                     <h2 className="max-w-[596px] font-semibold text-center lg:text-start text-3xl lg:text-[3.4rem] text-[#d9d9d9] leading-tight">
                         Junte-se a nós e <span className="text-[#55d98d]">transforme a sua <br /> vida financeira</span>
                     </h2>
@@ -85,7 +85,7 @@ export function FormSection() {
                     </p>
                 </div>
 
-                <div className="registration__form flex-1 flex flex-col items-center justify-center gap-5 p-2 rounded-2xl">
+                <div className="w-full gradient-form px-6 flex-1 flex flex-col items-center justify-center gap-5 md:p-2 rounded-2xl">
                     <img
                         src={'./assets/logos/logo-coicraft.png'}
                         alt="Imagem Coin Craft"
@@ -93,7 +93,7 @@ export function FormSection() {
                     />
 
                     <Form {...form}>
-                        <form onSubmit={form.handleSubmit(onSubmit)} className="w-full  flex flex-col px-4 lg:px-12 gap-3">
+                        <form onSubmit={form.handleSubmit(onSubmit)} className="w-full flex flex-col px-4 lg:px-12 gap-3">
                             <FormField
                                 control={form.control}
                                 name="username"
