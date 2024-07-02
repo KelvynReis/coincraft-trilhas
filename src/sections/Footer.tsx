@@ -23,10 +23,6 @@ export function Footer() {
 
 
                 <div className="w-full flex flex-col justify-between items-center border-t-2 py-4 lg:flex-row">
-                    <span className="text-white">
-                        Termos e condições
-                    </span>
-
                     <div className="flex flex-col items-center gap-2 lg:gap-12 lg:flex-row">
                         {navLinks.map((link, i) => (
                             <a

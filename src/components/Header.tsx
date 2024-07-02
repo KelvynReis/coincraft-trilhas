@@ -10,7 +10,7 @@ export function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="absolute left-0 top-0 z-50 flex  w-full items-center justify-center bg-transparent  md:border-b-2 md:border-white">
+        <header className=" left-0 top-0 z-50 flex  w-full items-center justify-center bg-transparent  md:border-b-2 md:border-white">
             <div className="w-full flex justify-between mx-auto max-w-[1200px] lg:pt-[41px] lg:pb-[25px] px-8">
                 <div className="flex w-full flex-1 items-center justify-between">
                     <div className="flex lg:hidden">
